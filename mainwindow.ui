@@ -212,7 +212,13 @@ QLabel{color: #303641;}</string>
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>77</height>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>120</height>
        </size>
       </property>
       <property name="frameShape">
@@ -226,7 +232,7 @@ QLabel{color: #303641;}</string>
         <number>3</number>
        </property>
        <property name="bottomMargin">
-        <number>6</number>
+        <number>3</number>
        </property>
        <item>
         <layout class="QFormLayout" name="formLayout">
@@ -453,13 +459,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -475,13 +481,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -503,13 +509,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -538,13 +544,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -566,13 +572,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -585,13 +591,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -613,13 +619,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -632,13 +638,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -660,13 +666,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -685,13 +691,13 @@ QLabel{color: #303641;}</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>20</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
