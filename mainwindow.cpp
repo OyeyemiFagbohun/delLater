@@ -41,18 +41,26 @@ void MainWindow :: readData1()
         dbFile.close();
         dbFile.open(QFile::WriteOnly | QFile::Append);
         ui->statusLabel->setText("Recieving");
-        QTimer::singleShot(100000, this, SLOT(stopDbRead()));
+        //QTimer::singleShot(100000, this, SLOT(stopDbRead()));
         isDbReadStarted = true;
     }
     QByteArray data = s_port1->readAll();
+    if(data.endsWith(QString("THE-END\r\r\n").toStdString().c_str()));
+    {
+        data.chop(10);
+        ui->uStatusLab->setText("Done");
+    }
     dbFile.write(data);
 }
 
 void MainWindow :: stopDbRead()
 {
-    ui->statusLabel->setText("Done");
-    dbFile.close();
-    isDbReadStarted = false;
+    if(isDbReadStarted == true)
+    {
+        ui->statusLabel->setText("Done");
+        dbFile.close();
+        isDbReadStarted = false;
+    }
 }
 void MainWindow :: readData2()
 {
