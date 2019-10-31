@@ -101,7 +101,7 @@ QLabel{color: #303641;}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="statusLabel">
          <property name="minimumSize">
           <size>
            <width>100</width>
@@ -307,7 +307,7 @@ QLabel{color: #303641;}</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="idLabel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -519,7 +519,7 @@ QLabel{color: #303641;}</string>
           </size>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -582,7 +582,7 @@ QLabel{color: #303641;}</string>
           </size>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -629,7 +629,7 @@ QLabel{color: #303641;}</string>
           </size>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -676,7 +676,7 @@ QLabel{color: #303641;}</string>
           </size>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -701,7 +701,7 @@ QLabel{color: #303641;}</string>
           </size>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
