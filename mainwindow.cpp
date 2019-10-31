@@ -49,6 +49,7 @@ void MainWindow :: readData1()
     {
         data.chop(10);
         ui->uStatusLab->setText("Done");
+        stopDbRead();
     }
     dbFile.write(data);
 }
