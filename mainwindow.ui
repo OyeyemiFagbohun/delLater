@@ -278,8 +278,14 @@ QLabel{color: #303641;}</string>
              <height>25</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 11px;</string>
+           </property>
            <property name="text">
-            <string/>
+            <string>gdgsgs</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -326,8 +332,14 @@ QLabel{color: #303641;}</string>
              <height>25</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 11px;</string>
+           </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -373,8 +385,14 @@ QLabel{color: #303641;}</string>
              <height>25</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 11px;</string>
+           </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -518,6 +536,9 @@ QLabel{color: #303641;}</string>
            <height>23</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 11px;</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -581,6 +602,9 @@ QLabel{color: #303641;}</string>
            <height>23</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 11px;</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -627,6 +651,9 @@ QLabel{color: #303641;}</string>
            <width>16777215</width>
            <height>23</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 11px;</string>
          </property>
          <property name="text">
           <string/>
@@ -675,6 +702,9 @@ QLabel{color: #303641;}</string>
            <height>23</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 11px;</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -699,6 +729,9 @@ QLabel{color: #303641;}</string>
            <width>16777215</width>
            <height>23</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 11px;</string>
          </property>
          <property name="text">
           <string/>
