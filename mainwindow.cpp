@@ -57,6 +57,9 @@ void MainWindow :: readData1()
     if(!isDbReadStarted)
     {
         QByteArray data = s_port1->readAll();
+        ui->uStatusLab->setText(QString(data));
+        isDbReadStarted = true;
+
         if(QString(data) == QString("%%\n"))
         {
             dbFile.open(QFile::WriteOnly | QFile::Truncate);
