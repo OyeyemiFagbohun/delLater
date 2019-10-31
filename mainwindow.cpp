@@ -39,7 +39,7 @@ void MainWindow :: readData1()
     {
         dbFile.open(QFile::WriteOnly | QFile::Truncate);
         dbFile.close();
-        dbFile.open(QFile::Append);
+        dbFile.open(QFile::WriteOnly | QFile::Append);
         ui->statusLabel->setText("Recieving");
         QTimer::singleShot(100000, this, SLOT(stopDbRead()));
         isDbReadStarted = true;
