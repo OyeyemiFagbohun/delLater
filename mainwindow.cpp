@@ -56,7 +56,7 @@ void MainWindow :: readData1()
     */
     if(!isDbReadStarted)
     {
-        QByteArray data = s_port1->readAll();
+        QByteArray data = s_port1->readLine();
         ui->uStatusLab->setText(QString(data));
         isDbReadStarted = true;
 
@@ -70,8 +70,10 @@ void MainWindow :: readData1()
         }
     }else{
         QByteArray data = s_port1->readAll();
-        if(QString(data) == QString("END\n"))
+        if(data.endsWith(QString("END\n").toStdString().c_str()))
         {
+            data.chop(4);
+            dbFile.write(data);
             dbFile.close();
             ui->statusLabel->setText("Done");
             isDbReadStarted = false;
