@@ -26,6 +26,9 @@ MainWindow::MainWindow(QWidget *parent) :
     openPort2("/dev/ttyUSB0");
     isDbReadStarted = false;
     dbFile.setFileName("db.db");
+
+    inTimer = new QTimer(this);
+    connect(inTimer, SIGNAL(timeout()), this, SLOT(stopDbRead()));
 }
 
 MainWindow::~MainWindow()
@@ -35,63 +38,31 @@ MainWindow::~MainWindow()
 
 void MainWindow :: readData1()
 {
-    /*
     if(!isDbReadStarted)
     {
         dbFile.open(QFile::WriteOnly | QFile::Truncate);
         dbFile.close();
         dbFile.open(QFile::WriteOnly | QFile::Append);
         ui->statusLabel->setText("Recieving");
-        //QTimer::singleShot(100000, this, SLOT(stopDbRead()));
         isDbReadStarted = true;
     }
+
     QByteArray data = s_port1->readAll();
-    if(data.endsWith(QString("THE-END\r\r\n").toStdString().c_str()));
-    {
-        data.chop(10);
-        ui->uStatusLab->setText("Done");
-        stopDbRead();
-    }
     dbFile.write(data);
-    */
-    if(!isDbReadStarted)
+
+    if(inTimer->isActive())
     {
-        QByteArray data = s_port1->readLine();
-        ui->uStatusLab->setText(QString(data));
-        isDbReadStarted = true;
-
-        if(QString(data) == QString("%%\n"))
-        {
-            dbFile.open(QFile::WriteOnly | QFile::Truncate);
-            dbFile.close();
-            dbFile.open(QFile::WriteOnly | QFile::Append);
-            ui->statusLabel->setText("Recieving");
-            isDbReadStarted = true;
-        }
-    }else{
-        QByteArray data = s_port1->readAll();
-        if(data.endsWith(QString("END\n").toStdString().c_str()))
-        {
-            data.chop(4);
-            dbFile.write(data);
-            dbFile.close();
-            ui->statusLabel->setText("Done");
-            isDbReadStarted = false;
-        }else{
-            dbFile.write(data);
-        }
+        inTimer->stop();
     }
-
+    inTimer->start(3000);
 }
 
 void MainWindow :: stopDbRead()
 {
-    if(isDbReadStarted == true)
-    {
-        ui->statusLabel->setText("Done");
-        dbFile.close();
-        isDbReadStarted = false;
-    }
+    inTimer->stop();
+    ui->statusLabel->setText("Done");
+    dbFile.close();
+    isDbReadStarted = false;
 }
 void MainWindow :: readData2()
 {
