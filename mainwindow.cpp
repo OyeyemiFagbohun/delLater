@@ -22,8 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(s_port1, &QSerialPort::readyRead, this, &MainWindow::readData1);
     s_port2 = new QSerialPort();
     connect(s_port2, &QSerialPort::readyRead, this, &MainWindow::readData2);
-    openPort1("/dev/ttyUSB0");
-    openPort2("/dev/serial0");
+    openPort1("/dev/serial0");
+    openPort2("/dev/ttyUSB0");
     isDbReadStarted = false;
     dbFile.setFileName("db.db");
 }
