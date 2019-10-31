@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     inTimer = new QTimer(this);
     connect(inTimer, SIGNAL(timeout()), this, SLOT(stopDbRead()));
+    dontTouch = 0;
 }
 
 MainWindow::~MainWindow()
@@ -38,6 +39,8 @@ MainWindow::~MainWindow()
 
 void MainWindow :: readData1()
 {
+    QByteArray data = s_port1->readAll();
+
     if(!isDbReadStarted)
     {
         dbFile.open(QFile::WriteOnly | QFile::Truncate);
@@ -45,9 +48,9 @@ void MainWindow :: readData1()
         dbFile.open(QFile::WriteOnly | QFile::Append);
         ui->statusLabel->setText("Recieving");
         isDbReadStarted = true;
+        dontTouch = 0;
     }
 
-    QByteArray data = s_port1->readAll();
     dbFile.write(data);
 
     if(inTimer->isActive())
@@ -55,10 +58,17 @@ void MainWindow :: readData1()
         inTimer->stop();
     }
     inTimer->start(3000);
+    dontTouch = 4;
 }
 
 void MainWindow :: stopDbRead()
 {
+    if(dontTouch == 4)
+    {
+        dontTouch = 0;
+        return;
+    }
+
     inTimer->stop();
     ui->statusLabel->setText("Done");
     dbFile.close();

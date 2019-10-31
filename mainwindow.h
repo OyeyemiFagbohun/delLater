@@ -24,6 +24,7 @@ class MainWindow : public QMainWindow
     bool isDbReadStarted;
     QFile dbFile;
     QTimer *inTimer;
+    int dontTouch;
 
 
 public:
