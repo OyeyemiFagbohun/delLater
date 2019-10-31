@@ -35,6 +35,7 @@ MainWindow::~MainWindow()
 
 void MainWindow :: readData1()
 {
+    /*
     if(!isDbReadStarted)
     {
         dbFile.open(QFile::WriteOnly | QFile::Truncate);
@@ -52,6 +53,30 @@ void MainWindow :: readData1()
         stopDbRead();
     }
     dbFile.write(data);
+    */
+    if(!isDbReadStarted)
+    {
+        QByteArray data = s_port1->readAll();
+        if(QString(data) == QString("%%\n"))
+        {
+            dbFile.open(QFile::WriteOnly | QFile::Truncate);
+            dbFile.close();
+            dbFile.open(QFile::WriteOnly | QFile::Append);
+            ui->statusLabel->setText("Recieving");
+            isDbReadStarted = true;
+        }
+    }else{
+        QByteArray data = s_port1->readAll();
+        if(QString(data) == QString("END\n"))
+        {
+            dbFile.close();
+            ui->statusLabel->setText("Done");
+            isDbReadStarted = false;
+        }else{
+            dbFile.write(data);
+        }
+    }
+
 }
 
 void MainWindow :: stopDbRead()
