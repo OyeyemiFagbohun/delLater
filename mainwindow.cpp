@@ -30,6 +30,8 @@ MainWindow::MainWindow(QWidget *parent) :
     inTimer = new QTimer(this);
     connect(inTimer, SIGNAL(timeout()), this, SLOT(stopDbRead()));
     dontTouch = 0;
+
+    ui->groupBox->setHidden(true);
 }
 
 MainWindow::~MainWindow()
