@@ -282,7 +282,7 @@ QLabel{color: #303641;}</string>
             <string notr="true">font-size: 11px;</string>
            </property>
            <property name="text">
-            <string>gdgsgs</string>
+            <string/>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>

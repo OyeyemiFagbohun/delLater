@@ -42,6 +42,7 @@ void MainWindow :: readData1()
         dbFile.open(QFile::Append);
         ui->statusLabel->setText("Recieving");
         QTimer::singleShot(100000, this, SLOT(stopDbRead()));
+        isDbReadStarted = true;
     }
     QByteArray data = s_port1->readAll();
     dbFile.write(data);
@@ -51,6 +52,7 @@ void MainWindow :: stopDbRead()
 {
     ui->statusLabel->setText("Done");
     dbFile.close();
+    isDbReadStarted = false;
 }
 void MainWindow :: readData2()
 {
