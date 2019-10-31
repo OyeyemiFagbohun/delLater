@@ -39,7 +39,7 @@ MainWindow::~MainWindow()
 
 void MainWindow :: readData1()
 {
-    QByteArray data = s_port1->readAll();
+    /*QByteArray data = s_port1->readAll();
 
     if(!isDbReadStarted)
     {
@@ -58,7 +58,7 @@ void MainWindow :: readData1()
         inTimer->stop();
     }
     inTimer->start(3000);
-    dontTouch = 4;
+    dontTouch = 4;*/
 }
 
 void MainWindow :: stopDbRead()
