@@ -63,8 +63,9 @@ void MainWindow :: readData1()
     dontTouch = 4;*/
     QByteArray d = s_port1->readAll();
     data.append(d);
-    if(d.contains("\n"))
+    if(data.endsWith("\r\r\n"))
     {
+        data.chop(3);
         ui->statusLabel->setText("Ayii");
         QPixmap pp = QPixmap();
         pp.loadFromData(data);
