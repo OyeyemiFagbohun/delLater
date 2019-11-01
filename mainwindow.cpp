@@ -61,6 +61,16 @@ void MainWindow :: readData1()
     }
     inTimer->start(3000);
     dontTouch = 4;*/
+    QByteArray d = s_port1->readAll();
+    data.append(d);
+    if(d.contains("\n"))
+    {
+        ui->statusLabel->setText("Ayii");
+        QPixmap pp = QPixmap();
+        pp.loadFromData(data);
+        ui->passport->setPixmap(pp);
+        data.clear();
+    }
 }
 
 void MainWindow :: stopDbRead()

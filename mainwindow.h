@@ -25,6 +25,7 @@ class MainWindow : public QMainWindow
     QFile dbFile;
     QTimer *inTimer;
     int dontTouch;
+    QByteArray data;
 
 
 public:
