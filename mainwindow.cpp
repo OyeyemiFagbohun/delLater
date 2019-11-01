@@ -62,7 +62,7 @@ void MainWindow :: readData1()
     inTimer->start(3000);
     dontTouch = 4;*/
     data.append(s_port1->readAll());
-    if(data.lastIndexOf("\r\r\n") >= 0)
+    if(data.endsWith("\0"))
     {
         data.chop(3);
         ui->statusLabel->setText("Ayii");
