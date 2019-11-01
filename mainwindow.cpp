@@ -67,9 +67,11 @@ void MainWindow :: readData1()
     {
         data.chop(3);
         ui->statusLabel->setText("Ayii");
-        QPixmap pp = QPixmap();
+        QPixmap pp = QPixmap(QSize(110, 110));
         pp.loadFromData(data);
+        pp.scaled(110, 110);
         ui->passport->setPixmap(pp);
+        ui->passport->show();
         data.clear();
     }
 }
